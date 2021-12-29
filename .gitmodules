@@ -1,0 +1,3 @@
+[submodule "weasel"]
+	path = weasel
+	url = https://github.com/dab-libs/weasel.git
