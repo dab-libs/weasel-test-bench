@@ -1,0 +1,4 @@
+GET http://weasel.localhost:9433/dial/info
+Accept: application/json
+
+###

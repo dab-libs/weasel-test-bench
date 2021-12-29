@@ -1,0 +1,3 @@
+index:
+  path: /dial/info
+  controller: Weasel\Api\Domain\GetDialInfoController::getDialInfo

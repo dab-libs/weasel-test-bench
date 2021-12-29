@@ -1,1 +1,2 @@
-# weasel-test-bench
+# Тестовый стенд для Weasel
+

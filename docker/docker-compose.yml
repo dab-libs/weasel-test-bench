@@ -1,0 +1,60 @@
+version: '3.7'
+
+services:
+  weasel-db:
+    container_name: weasel-db
+    image: postgres
+    environment:
+      POSTGRES_USER: ${WEASEL_DBUSER}
+      POSTGRES_PASSWORD: ${WEASEL_DBPASSWORD}
+      POSTGRES_DB: ${WEASEL_DBDATABASE}
+    expose:
+      - 5432
+    volumes:
+      - ./development/postgres/data:/var/lib/postgresql/data
+    ports:
+      - "9931:5432"
+    networks:
+      - weasel-network
+
+  weasel-php:
+    container_name: weasel-php
+    build:
+      context: "./../"
+      dockerfile: "./docker/images/php/Dockerfile"
+    expose:
+      - 9001
+    volumes:
+      - ./../backend:/var/www:cached
+      - ./development/logs/weasel:/var/www/var/log:cached
+      - ./development/run:/var/run/weasel
+    environment:
+      WEASEL_VERSION: dev
+    env_file:
+      - ./.env
+    depends_on:
+      - weasel-db
+    networks:
+      - weasel-network
+
+  weasel-nginx:
+    container_name: weasel-nginx
+    build:
+      context: "./images/nginx/"
+      dockerfile: ./Dockerfile
+      args:
+        - WEASEL_FASTCGI_PASS=php-upstream
+    ports:
+      - "9933:80"
+      - "9934:443"
+    depends_on:
+      - weasel-db
+      - weasel-php
+    volumes:
+      - ./development/logs/nginx:/var/log/nginx:cached
+      - ./development/run:/var/run/weasel
+    networks:
+      - weasel-network
+
+networks:
+  weasel-network:

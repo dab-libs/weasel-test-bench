@@ -1,0 +1,44 @@
+version: '3.7'
+services:
+  weasel-db-test:
+    container_name: weasel-db-test
+    image: postgres
+    environment:
+      - POSTGRES_USER=${weasel_dbuser}
+      - POSTGRES_PASSWORD=${weasel_dbpassword}
+      - POSTGRES_DB=${weasel_dbdatabase}
+    expose:
+    - 5432
+    networks:
+      - weasel-network-test
+
+  weasel-php-test:
+    container_name: weasel-php-test
+    build:
+      context: "./../"
+      dockerfile: "./docker/images/php-test/Dockerfile"
+      args:
+        - WEASEL_DBHOST=${weasel_dbhost}
+        - WEASEL_DBUSER=${weasel_dbuser}
+        - WEASEL_DBPASSWORD=${weasel_dbpassword}
+        - WEASEL_DBDATABASE=${weasel_dbdatabase}
+        - WEASEL_DBPORT=${weasel_dbport}
+        - WEASEL_DEBUG=${weasel_debug}
+        - WEASEL_ENV=${weasel_env}
+        - WEASEL_SECRET=${weasel_secret}
+    environment:
+      - WEASEL_DBHOST=${weasel_dbhost}
+      - WEASEL_DBUSER=${weasel_dbuser}
+      - WEASEL_DBPASSWORD=${weasel_dbpassword}
+      - WEASEL_DBDATABASE=${weasel_dbdatabase}
+      - WEASEL_DBPORT=${weasel_dbport}
+      - WEASEL_DEBUG=${weasel_debug}
+      - WEASEL_ENV=${weasel_env}
+      - WEASEL_SECRET=${weasel_secret}
+    depends_on:
+      - weasel-db-test
+    networks:
+      - weasel-network-test
+
+networks:
+  weasel-network-test:

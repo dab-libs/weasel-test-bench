@@ -1,0 +1,15 @@
+doctrine:
+    dbal:
+        driver: pdo_pgsql
+        host: '%env(WEASEL_DBHOST)%'
+        port: '%env(WEASEL_DBPORT)%'
+        dbname: '%env(WEASEL_DBDATABASE)%'
+        user: '%env(WEASEL_DBUSER)%'
+        password: '%env(WEASEL_DBPASSWORD)%'
+        server_version: '13'
+        charset: UTF8
+    orm:
+        auto_generate_proxy_classes: true
+        naming_strategy: doctrine.orm.naming_strategy.underscore_number_aware
+        auto_mapping: true
+        mappings:
