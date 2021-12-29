@@ -1,2 +1,2 @@
 #!/bin/bash
-docker exec -it weasel-php-dev composer dump-autoload
+docker exec -it weasel-php composer require --dev dab/waesel-bundle:*
