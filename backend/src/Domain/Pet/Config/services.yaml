@@ -9,3 +9,6 @@ services:
 
   Weasel\TestBench\Domain\Pet\Api\FindPetsByName:
     class: Weasel\TestBench\Domain\Pet\Service\FindPetsByName
+
+  Weasel\TestBench\Domain\Pet\Api\CreatePet:
+    class: Weasel\TestBench\Domain\Pet\Service\CreatePet

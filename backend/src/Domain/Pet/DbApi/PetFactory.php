@@ -2,8 +2,8 @@
 
 namespace Weasel\TestBench\Domain\Pet\DbApi;
 
-use Weasel\TestBench\Domain\Pet\Api;
+use Weasel\TestBench\Domain\Pet\Model;
 
 interface PetFactory {
-  public function create(): Api\Pet;
+  public function createPet(): Model\Pet;
 }

@@ -106,6 +106,9 @@
       <path value="$PROJECT_DIR$/backend/vendor/doctrine/collections" />
       <path value="$PROJECT_DIR$/backend/vendor/symfony/polyfill-mbstring" />
       <path value="$PROJECT_DIR$/backend/vendor/dab/waesel-bundle" />
+      <path value="$PROJECT_DIR$/backend/vendor/ramsey/collection" />
+      <path value="$PROJECT_DIR$/backend/vendor/ramsey/uuid" />
+      <path value="$PROJECT_DIR$/backend/vendor/brick/math" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="8.0">
