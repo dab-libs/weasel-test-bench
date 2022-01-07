@@ -6,3 +6,6 @@ services:
 
   Weasel\TestBench\Domain\Pet\Api\FindOnePetById:
     class: Weasel\TestBench\Domain\Pet\Service\FindOnePetById
+
+  Weasel\TestBench\Domain\Pet\Api\FindPetsByName:
+    class: Weasel\TestBench\Domain\Pet\Service\FindPetsByName
