@@ -1,0 +1,4 @@
+create_pet:
+  path:       /pets
+  controller: \Weasel\TestBench\Controller\Pet\Service\CreatePet::handleRequest
+  methods:    post
