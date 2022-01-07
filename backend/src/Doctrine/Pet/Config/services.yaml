@@ -1,0 +1,11 @@
+services:
+  # default configuration for services in *this* file
+  _defaults:
+    autowire: true      # Automatically injects dependencies in your services.
+    autoconfigure: true # Automatically registers your services as commands, event subscribers, etc.
+
+  Weasel\TestBench\Domain\Pet\DbApi\PetFactory:
+    class: Weasel\TestBench\Doctrine\Pet\Model\PetFactory
+
+  Weasel\TestBench\Domain\Pet\DbApi\PetRepository:
+    class: \Weasel\TestBench\Doctrine\Pet\Model\PetRepository
