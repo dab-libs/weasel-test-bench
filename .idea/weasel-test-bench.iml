@@ -107,6 +107,7 @@
       <excludeFolder url="file://$MODULE_DIR$/backend/vendor/sebastian/object-enumerator" />
       <excludeFolder url="file://$MODULE_DIR$/backend/vendor/doctrine/collections" />
       <excludeFolder url="file://$MODULE_DIR$/backend/vendor/symfony/polyfill-mbstring" />
+      <excludeFolder url="file://$MODULE_DIR$/backend/bundles" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
