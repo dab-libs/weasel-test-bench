@@ -3,3 +3,6 @@ services:
   _defaults:
     autowire: true      # Automatically injects dependencies in your services.
     autoconfigure: true # Automatically registers your services as commands, event subscribers, etc.
+
+  Weasel\TestBench\Domain\Pet\Api\FindOnePetById:
+    class: Weasel\TestBench\Domain\Pet\Service\FindOnePetById
