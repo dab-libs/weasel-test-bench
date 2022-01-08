@@ -1,0 +1,9 @@
+create_pet:
+  path:       /pets
+  controller: \Weasel\TestBench\WebApi\Pet\Service\CreatePet::do
+  methods:    post
+
+get_pets:
+  path:       /pets
+  controller: \Weasel\TestBench\WebApi\Pet\Service\GetPets::do
+  methods:    get

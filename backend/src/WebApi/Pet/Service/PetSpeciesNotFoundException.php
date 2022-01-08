@@ -1,6 +1,6 @@
 <?php
 
-namespace Weasel\TestBench\Controller\Pet\Service;
+namespace Weasel\TestBench\WebApi\Pet\Service;
 
 use Exception;
 

@@ -1,11 +1,11 @@
 <?php
 
-namespace Weasel\TestBench\Controller\Pet\Model;
+namespace Weasel\TestBench\WebApi\Pet\Model;
 
 class PetDataToFind {
   public function __construct(
+    public ?string $id,
     public ?string $name,
-    public ?string $species,
   ) {
   }
 }

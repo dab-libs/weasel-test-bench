@@ -1,19 +1,29 @@
 <?php
 
-namespace Weasel\TestBench\Controller\Pet\Service;
+namespace Weasel\TestBench\WebApi\Base\Api;
 
 use Exception;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
+use Weasel\TestBench\WebApi\Base\DbApi\Transaction;
 
-abstract class BaseController {
-  public function handleRequest(Request $request): Response {
+abstract class Controller {
+  public function __construct(
+    private Transaction $transaction,
+  ) {
+  }
+
+  public function do(Request $request): Response {
     try {
+      $this->transaction->begin();
       $data = $this->mapRequestToData($request);
-      return $this->handleData($data);
+      $response = $this->handleData($data);
+      $this->transaction->commit();
+      return $response;
     }
     catch (Exception $exception) {
+      $this->transaction->rollback();
       return $this->handleException($exception);
     }
   }

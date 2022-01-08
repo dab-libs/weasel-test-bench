@@ -4,5 +4,5 @@ services:
     autowire: true      # Automatically injects dependencies in your services.
     autoconfigure: true # Automatically registers your services as commands, event subscribers, etc.
 
-  Weasel\TestBench\Controller\Pet\Service\MapPetToData:
-
+  Weasel\TestBench\Controller\Base\DbApi\Transaction:
+    class: Weasel\TestBench\Doctrine\Base\Service\Transaction

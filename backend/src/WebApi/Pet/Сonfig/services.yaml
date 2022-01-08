@@ -4,8 +4,7 @@ services:
     autowire: true      # Automatically injects dependencies in your services.
     autoconfigure: true # Automatically registers your services as commands, event subscribers, etc.
 
-  Weasel\TestBench\UseCase\Pet\Api\CreatePet:
-    class: Weasel\TestBench\UseCase\Pet\Service\CreatePet
+  Weasel\TestBench\WebApi\Pet\Service\MapPetToData:
 
-  Weasel\TestBench\UseCase\Pet\Api\FindPets:
-    class: Weasel\TestBench\UseCase\Pet\Service\FindPets
+  Weasel\TestBench\WebApi\Pet\Service\MapPetsToDataArray:
+

@@ -1,6 +1,6 @@
 <?php
 
-namespace Weasel\TestBench\Controller\Pet\Model;
+namespace Weasel\TestBench\WebApi\Pet\Model;
 
 class PetData {
   public function __construct(

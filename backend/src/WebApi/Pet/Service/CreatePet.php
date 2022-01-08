@@ -1,19 +1,22 @@
 <?php declare(strict_types=1);
 
-namespace Weasel\TestBench\Controller\Pet\Service;
+namespace Weasel\TestBench\WebApi\Pet\Service;
 
-use Exception;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
-use Weasel\TestBench\Controller\Pet\Model\PetDataToCreate;
+use Weasel\TestBench\WebApi\Base\Api\Controller;
+use Weasel\TestBench\WebApi\Base\DbApi\Transaction;
+use Weasel\TestBench\WebApi\Pet\Model\PetDataToCreate;
 use Weasel\TestBench\UseCase\Pet\Api as PetUseCase;
 
-class CreatePet extends BaseController {
+class CreatePet extends Controller {
   public function __construct(
+    Transaction                  $transaction,
     private PetUseCase\CreatePet $createPet,
-    private MapPetToData         $mapPetToAssoc,
+    private MapPetToData         $mapPetsToDataArray,
   ) {
+    parent::__construct($transaction);
   }
 
   /** @inheritdoc */
@@ -36,7 +39,7 @@ class CreatePet extends BaseController {
   protected function handleData(?object $data): Response {
     /** @var PetDataToCreate $data */
     $pet = $this->createPet->do($data->species, $data->name);
-    $assocPet = $this->mapPetToAssoc->do($pet);
+    $assocPet = $this->mapPetsToDataArray->do($pet);
     return new JsonResponse($assocPet);
   }
 }

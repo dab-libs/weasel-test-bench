@@ -1,8 +1,8 @@
 <?php
 
-namespace Weasel\TestBench\Controller\Pet\Service;
+namespace Weasel\TestBench\WebApi\Pet\Service;
 
-use Weasel\TestBench\Controller\Pet\Model\PetData;
+use Weasel\TestBench\WebApi\Pet\Model\PetData;
 use Weasel\TestBench\Domain\Pet\Api\Pet;
 
 class MapPetToData {
