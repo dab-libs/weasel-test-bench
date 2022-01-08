@@ -14,8 +14,8 @@
         <server name="SHELL_VERBOSITY" value="-1" />
         <server name="SYMFONY_PHPUNIT_REMOVE" value="" />
         <server name="SYMFONY_PHPUNIT_VERSION" value="8.5" />
-        <env name="KERNEL_CLASS" value="Sprut\Kernel" />
-        <server name="KERNEL_CLASS" value="Sprut\Kernel" />
+        <env name="KERNEL_CLASS" value="Weasel\TestBench\Tests\Kernel" />
+        <server name="KERNEL_CLASS" value="Weasel\TestBench\Tests\Kernel" />
     </php>
 
     <testsuites>

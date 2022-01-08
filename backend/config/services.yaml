@@ -5,7 +5,10 @@
 # https://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
 
 imports:
+    - {resource: ../src/Doctrine/*/Config/services.yaml}
     - {resource: ../src/Domain/*/Config/services.yaml}
+    - {resource: ../src/UseCase/*/Config/services.yaml}
+    - {resource: ../src/WebApi/*/Config/services.yaml}
 
 parameters:
 
