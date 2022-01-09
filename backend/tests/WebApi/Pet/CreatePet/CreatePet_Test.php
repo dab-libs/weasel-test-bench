@@ -44,4 +44,19 @@ class CreatePet_Test extends WebDbTestCase {
     $pets = $this->context->petRepository->findPetsByName($petDescription['name']);
     self::assertCount(1, $pets);
   }
+
+  public function testExistName() {
+    $petDescription = [
+      'name' => $this->fixture::PET_1,
+      'species' => Pet::DOG,
+    ];
+    $this->client->request(
+      method: 'POST',
+      uri: '/pets',
+      content: json_encode($petDescription, JSON_UNESCAPED_UNICODE),
+    );
+
+    $pets = $this->context->petRepository->findPetsByName($petDescription['name']);
+    self::assertCount(2, $pets);
+  }
 }
