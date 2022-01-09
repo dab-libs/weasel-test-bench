@@ -1,6 +1,6 @@
 <?php
 
-use Dab\Weasel\Kernel;
+use Weasel\TestBench\Kernel;
 use Symfony\Component\ErrorHandler\Debug;
 use Symfony\Component\HttpFoundation\Request;
 

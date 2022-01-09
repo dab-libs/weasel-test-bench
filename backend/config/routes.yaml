@@ -1,3 +1,2 @@
-index:
-  path: /dial/info
-  controller: Weasel\Api\Domain\GetDialInfoController::getDialInfo
+pet_routes:
+  resource: '../src/WebApi/Pet/Config/routes.yml'

@@ -22,7 +22,7 @@ class CreatePet extends Controller {
   /** @inheritdoc */
   protected function mapRequestToData(Request $request): ?object {
     $jsonRequestBody = $request->getContent();
-    $petData = json_decode($jsonRequestBody);
+    $petData = json_decode($jsonRequestBody, true);
     if (!array_key_exists('name', $petData)) {
       throw new PetNameNotFoundException();
     }

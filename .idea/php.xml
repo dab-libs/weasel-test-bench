@@ -109,18 +109,25 @@
       <path value="$PROJECT_DIR$/backend/vendor/ramsey/collection" />
       <path value="$PROJECT_DIR$/backend/vendor/ramsey/uuid" />
       <path value="$PROJECT_DIR$/backend/vendor/brick/math" />
+      <path value="$PROJECT_DIR$/backend/vendor/symfony/password-hasher" />
     </include_path>
   </component>
   <component name="PhpInterpreters">
     <interpreters>
-      <interpreter id="ad140aae-a7d7-4a4b-8af0-c74ae554bead" name="docker_weasel-php:latest" home="docker://DATA" debugger_id="php.debugger.XDebug">
-        <remote_data INTERPRETER_PATH="php" HELPERS_PATH="/opt/.phpstorm_helpers" INITIALIZED="false" VALID="true" RUN_AS_ROOT_VIA_SUDO="false" DOCKER_ACCOUNT_NAME="Docker" DOCKER_IMAGE_NAME="docker_weasel-php:latest" DOCKER_REMOTE_PROJECT_PATH="/opt/project" />
+      <interpreter id="550db660-1306-4e3c-b599-4b2dd39f077d" name="weasel-php" home="docker-compose://DATA" debugger_id="php.debugger.XDebug">
+        <remote_data INTERPRETER_PATH="php" HELPERS_PATH="/opt/.phpstorm_helpers" INITIALIZED="false" VALID="true" RUN_AS_ROOT_VIA_SUDO="false" DOCKER_ACCOUNT_NAME="Docker" DOCKER_COMPOSE_SERVICE_NAME="weasel-php" DOCKER_REMOTE_PROJECT_PATH="/opt/project">
+          <type_data command="RUN" />
+          <dockerComposeConfigurationPaths>
+            <item value="$PROJECT_DIR$/docker/docker-compose.yml" />
+          </dockerComposeConfigurationPaths>
+          <envs />
+        </remote_data>
       </interpreter>
     </interpreters>
   </component>
   <component name="PhpInterpretersPhpInfoCache">
     <phpInfoCache>
-      <interpreter name="docker_weasel-php:latest">
+      <interpreter name="weasel-php">
         <phpinfo binary_type="PHP" php_cli="/usr/bin/php8" path_separator=":" version="8.0.13">
           <additional_php_ini>/etc/php8/conf.d/00_ctype.ini, /etc/php8/conf.d/00_curl.ini, /etc/php8/conf.d/00_dom.ini, /etc/php8/conf.d/00_fileinfo.ini, /etc/php8/conf.d/00_gd.ini, /etc/php8/conf.d/00_iconv.ini, /etc/php8/conf.d/00_intl.ini, /etc/php8/conf.d/00_mbstring.ini, /etc/php8/conf.d/00_opcache.ini, /etc/php8/conf.d/00_openssl.ini, /etc/php8/conf.d/00_pdo.ini, /etc/php8/conf.d/00_session.ini, /etc/php8/conf.d/00_simplexml.ini, /etc/php8/conf.d/00_tokenizer.ini, /etc/php8/conf.d/00_xml.ini, /etc/php8/conf.d/00_xmlwriter.ini, /etc/php8/conf.d/00_zip.ini, /etc/php8/conf.d/01_mysqlnd.ini, /etc/php8/conf.d/01_pdo_pgsql.ini, /etc/php8/conf.d/01_phar.ini, /etc/php8/conf.d/02_mysqli.ini, /etc/php8/conf.d/02_pdo_mysql.ini, /etc/php8/conf.d/50_xdebug.ini, /etc/php8/conf.d/apcu.ini, /etc/php8/conf.d/weasel.ini, /etc/php8/conf.d/xdebug.ini</additional_php_ini>
           <configuration_file>/etc/php8/php.ini</configuration_file>

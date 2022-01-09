@@ -7,6 +7,7 @@ use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigura
 class Kernel extends \Weasel\TestBench\Kernel {
   protected function configureContainer(ContainerConfigurator $container): void {
     parent::configureContainer($container);
-    $container->import('WebApi/*/Сonfig/services.yaml');
+    echo '=========';
+    $container->import('./WebApi/Pet/Config/services.yaml');
   }
 }

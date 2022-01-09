@@ -4,7 +4,7 @@
                   xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping
                           https://www.doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
 
-    <entity name="Weasel\TestBench\Doctrine\Model\Pet" table="pet">
+    <entity name="Weasel\TestBench\Doctrine\Pet\Model\Pet" table="pet">
 
         <id name="pk" type="integer" column="pk">
             <generator strategy="IDENTITY"/>

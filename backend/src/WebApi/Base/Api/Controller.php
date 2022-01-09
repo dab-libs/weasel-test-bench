@@ -38,6 +38,12 @@ abstract class Controller {
     $error = [
       'message' => $exception->getMessage(),
     ];
-    return new JsonResponse($error, Response::HTTP_BAD_REQUEST);
+    $jsonData = json_encode($error, JSON_UNESCAPED_UNICODE);
+    $response = new JsonResponse(
+      data:   $error,
+      status: Response::HTTP_BAD_REQUEST,
+    );
+    $response->setEncodingOptions(JSON_UNESCAPED_UNICODE);
+    return $response;
   }
 }

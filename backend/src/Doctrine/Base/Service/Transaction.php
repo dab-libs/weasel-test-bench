@@ -15,6 +15,7 @@ class Transaction implements \Weasel\TestBench\WebApi\Base\DbApi\Transaction {
   }
 
   public function commit(): void {
+    $this->entityManager->flush();
     $this->entityManager->commit();
   }
 

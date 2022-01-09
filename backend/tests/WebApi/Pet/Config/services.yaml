@@ -3,8 +3,8 @@ services:
   _defaults:
     autowire: true      # Automatically injects dependencies in your services.
     autoconfigure: true # Automatically registers your services as commands, event subscribers, etc.
+    public: true
 
-  Weasel\TestBench\WebApi\Pet\Service\MapPetToData:
-
-  Weasel\TestBench\WebApi\Pet\Service\MapPetsToDataArray:
+  Weasel\TestBench\Tests\WebApi\Pet\CreatePet\CreatePet_Context:
+  Weasel\TestBench\Tests\WebApi\Pet\CreatePet\CreatePet_Fixture:
 
