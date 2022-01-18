@@ -40,6 +40,7 @@ class CreatePet extends Controller {
     /** @var PetDataToCreate $data */
     $pet = $this->createPet->do($data->species, $data->name);
     $assocPet = $this->mapPetsToDataArray->do($pet);
-    return new JsonResponse($assocPet);
+    $json = json_encode($assocPet, JSON_UNESCAPED_UNICODE);
+    return new JsonResponse(data: $json, json: true);
   }
 }

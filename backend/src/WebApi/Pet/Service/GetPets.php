@@ -36,7 +36,7 @@ class GetPets extends Controller {
     /** @var PetDataToFind $data */
     $pets = $this->findPets->do($data->id, $data->name);
     $petDataArray = $this->mapPetsToDataArray->do($pets);
-    $jsonData = json_encode($petDataArray, JSON_UNESCAPED_UNICODE);
-    return new JsonResponse($jsonData);
+    $json = json_encode($petDataArray, JSON_UNESCAPED_UNICODE);
+    return new JsonResponse(data: $json, json: true);
   }
 }

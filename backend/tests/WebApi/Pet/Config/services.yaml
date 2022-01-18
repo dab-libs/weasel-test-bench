@@ -7,4 +7,5 @@ services:
 
   Weasel\TestBench\Tests\WebApi\Pet\CreatePet\CreatePet_Context:
   Weasel\TestBench\Tests\WebApi\Pet\CreatePet\CreatePet_Fixture:
-
+  Weasel\TestBench\Tests\WebApi\Pet\GetPet\GetPet_Context:
+  Weasel\TestBench\Tests\WebApi\Pet\GetPet\GetPet_Fixture:
