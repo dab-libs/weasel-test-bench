@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0862d85bd252c78c67cdbb6ca3dfb0a2",
+    "content-hash": "a3ee0f37f31d22e58d2712a2fa15bf53",
     "packages": [
         {
             "name": "brick/math",
@@ -5477,12 +5477,12 @@
     ],
     "packages-dev": [
         {
-            "name": "dab/waesel-bundle",
+            "name": "dab-libs/waesel-bundle",
             "version": "1.0.0",
             "dist": {
                 "type": "path",
                 "url": "./bundles/weasel",
-                "reference": "b24308efab0b04c54e9d19fe4eb78d32b04fdc66"
+                "reference": "ca1fe4fc3aaeb53b8d5b2503cc474aebb594b03c"
             },
             "require": {
                 "php": ">=8.0",
@@ -5498,7 +5498,7 @@
             },
             "authors": [
                 {
-                    "name": "dab",
+                    "name": "dab-libs",
                     "email": "uncle.demian@gmail.com"
                 }
             ],

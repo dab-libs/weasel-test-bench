@@ -70,7 +70,7 @@
         }
     },
     "require-dev": {
-        "dab/waesel-bundle": "*",
+        "dab-libs/waesel-bundle": "^1.0",
         "nelmio/cors-bundle": "^2.1",
         "phpunit/phpunit": "^9.5",
         "symfony/panther": "^1.0",

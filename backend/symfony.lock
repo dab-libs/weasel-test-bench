@@ -5,7 +5,7 @@
     "composer/package-versions-deprecated": {
         "version": "1.11.99.1"
     },
-    "dab/waesel-bundle": {
+    "dab-libs/waesel-bundle": {
         "version": "1.0.0"
     },
     "doctrine/annotations": {
