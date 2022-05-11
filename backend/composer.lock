@@ -5488,11 +5488,11 @@
     "packages-dev": [
         {
             "name": "dab-libs/waesel-bundle",
-            "version": "1.0.4",
+            "version": "1.0.5",
             "dist": {
                 "type": "path",
                 "url": "./bundles/weasel",
-                "reference": "6050bbc5611035c7eaf3a752c2b5dd693abc8b35"
+                "reference": "f2eb541c8e957daf30fdf276c5ce518960e935fb"
             },
             "require": {
                 "php": ">=8.0",
