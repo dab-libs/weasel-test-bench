@@ -6,4 +6,3 @@ services:
     public: true
 
   Weasel\TestBench\Tests\UseCase\Pet\FindPets\FindPets_Fixture:
-  Weasel\TestBench\Tests\UseCase\Pet\FindPets\FindPets_Context:

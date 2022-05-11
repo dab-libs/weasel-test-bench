@@ -4,10 +4,11 @@ namespace Weasel\TestBench\Tests\WebApi\Pet\GetPet;
 
 use Dab\Weasel\WebDbTestCase;
 use Weasel\TestBench\Domain\Pet\Api\Pet;
+use Weasel\TestBench\Domain\Pet\DbApi\PetRepository;
 
 class GetPet_Test extends WebDbTestCase {
   /** @RequiredForTest) */
-  private ?GetPet_Context $context = null;
+  private ?PetRepository $petRepository = null;
   /** @RequiredForTest) */
   private ?GetPet_Fixture $fixture = null;
 

@@ -4,10 +4,11 @@ namespace Weasel\TestBench\Tests\WebApi\Pet\CreatePet;
 
 use Dab\Weasel\WebDbTestCase;
 use Weasel\TestBench\Domain\Pet\Api\Pet;
+use Weasel\TestBench\Domain\Pet\DbApi\PetRepository;
 
 class CreatePet_Test extends WebDbTestCase {
   /** @RequiredForTest) */
-  private ?CreatePet_Context $context = null;
+  private ?PetRepository $petRepository = null;
   /** @RequiredForTest) */
   private ?CreatePet_Fixture $fixture = null;
 
@@ -41,7 +42,7 @@ class CreatePet_Test extends WebDbTestCase {
       content: json_encode($petDescription, JSON_UNESCAPED_UNICODE),
     );
 
-    $pets = $this->context->petRepository->findPetsByName($petDescription['name']);
+    $pets = $this->petRepository->findPetsByName($petDescription['name']);
     self::assertCount(1, $pets);
   }
 
@@ -56,7 +57,7 @@ class CreatePet_Test extends WebDbTestCase {
       content: json_encode($petDescription, JSON_UNESCAPED_UNICODE),
     );
 
-    $pets = $this->context->petRepository->findPetsByName($petDescription['name']);
+    $pets = $this->petRepository->findPetsByName($petDescription['name']);
     self::assertCount(2, $pets);
   }
 }
