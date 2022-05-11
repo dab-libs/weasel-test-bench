@@ -29,7 +29,6 @@ class PetRepository implements DbApi\PetRepository {
    * @return Model\Pet[]
    */
   public function findPetsByName(string $name): array {
-    $all = $this->objectRepository->findAll();
     return $this->objectRepository->findBy(['name' => $name]);
   }
 }

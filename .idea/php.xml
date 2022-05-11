@@ -110,6 +110,7 @@
       <path value="$PROJECT_DIR$/backend/vendor/brick/math" />
       <path value="$PROJECT_DIR$/backend/vendor/symfony/password-hasher" />
       <path value="$PROJECT_DIR$/backend/vendor/dab-libs/waesel-bundle" />
+      <path value="$PROJECT_DIR$/backend/vendor/dab/waesel-bundle" />
     </include_path>
   </component>
   <component name="PhpInterpreters">
