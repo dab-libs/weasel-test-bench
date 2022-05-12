@@ -5488,11 +5488,11 @@
     "packages-dev": [
         {
             "name": "dab-libs/waesel-bundle",
-            "version": "1.0.6",
+            "version": "1.0.8",
             "dist": {
                 "type": "path",
                 "url": "./bundles/weasel",
-                "reference": "dcea4a2381869667f9c8a333cfe3ceebbb7c83da"
+                "reference": "3288c546f1e05251629f996a20de047b4e59d70d"
             },
             "require": {
                 "php": ">=8.0",
@@ -5515,6 +5515,7 @@
                     "email": "uncle.demian@gmail.com"
                 }
             ],
+            "description": "Small library designed to simplify integration testing of Symfony applications",
             "transport-options": {
                 "symlink": true,
                 "relative": true
